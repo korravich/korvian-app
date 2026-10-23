@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>Korvian</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#06060a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Korvian">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+  html, body { margin: 0; height: 100%; background: #06060a; }
+  iframe { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; background: #06060a; }
+</style>
+</head>
+<body>
+<!-- ถ้า URL แอปของคุณเปลี่ยน ให้แก้ตรง src ด้านล่างเพียงจุดเดียว -->
+<iframe
+  id="app"
+  title="Korvian"
+  src="https://korvian-tzkxnvuwca8xappatu8hxdr.streamlit.app/?embed=true"
+  allow="clipboard-write; fullscreen">
+</iframe>
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js").catch(function () {});
+  }
+</script>
+</body>
+</html>
